@@ -1,0 +1,6 @@
+docker build -t quantico_docs .
+
+docker tag quantico_docs us.icr.io/quantico-reader/quantico_docs:1.0.0
+docker push us.icr.io/quantico-reader/quantico_docs:1.0.0
+kubectl apply -f ../infra/k8s/docs-dpl.yaml
+bx cr login

@@ -14,4 +14,3 @@ These types are supported:
 
 [filename](_tables/userstable.md ':include')
 
-
