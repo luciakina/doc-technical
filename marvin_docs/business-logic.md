@@ -1,6 +1,6 @@
 ## Business Logic
 
-### Context:
+### Background:
 The client is a holding company with more than 40 years of presence in the market. They have 4 top companies in Peru in the Retail and Banking sector: “La Curacao” and “Tiendas Efe” are domestic appliance stores. “Motocorp” is a chain of stores specialized in the sale of multi-brand motorcycles, and “Financiera Efectiva” offers credit products.
 
 The client carries out several customer satisfaction surveys.

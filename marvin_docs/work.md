@@ -1,11 +1,11 @@
-# Work #
+## Work
 
-## Work Estimation and timelines ##
+### Work Estimation and timelines
 Detalle a nivel de tareas y tiempos por cada una
 Recursos necesarios para cumplir las tareas
 
-## Milestones ##
+### Milestones
 Agrupación de tareas con hitos 
 
-## Prioritization ##
+### Prioritization
 Categorización de las tareas que son prioritarias

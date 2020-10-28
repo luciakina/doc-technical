@@ -1,4 +1,4 @@
-## FAQ ##
+## FAQ
 Aquí podemos ir agregando poco a poco las preguntas frecuentes que puedan existir en todo el flujo de desarrollo de software.
 Por ejemplo:
 * Cuánto va a escalar la aplicación?
