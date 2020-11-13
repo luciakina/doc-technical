@@ -18,3 +18,4 @@
 * [Other](/marvin_docs/other)
 * [Success Consideration](/marvin_docs/success-consideration)
 * [Work](/marvin_docs/work)
+* [Manuals](/marvin_docs/manual)
