@@ -6,6 +6,13 @@ The idea is to have a one file skaffold.yaml and this file handle all the .yaml 
 
 But for the moment, we will use directly files .yaml
 
+Up envioroment
+
+```bash
+cd api
+npm run dev
+```
+
 Build image docker with the next command
 
 
