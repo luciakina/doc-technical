@@ -1,25 +1,26 @@
 # Auth #
 
 ## Abstract ##
-[Breve resumen de lo que se cubrirá en el documento]
+Auth Service is a centralized product to manage user credentials for all products provided by Quantico
 
 ## Terminology ##
-[Todos los términos empleados en este proyecto]
+--
 
 ## Context ##
-[Describir el contexto del producto]
+Each application has users, and they need simple or complex authentication and validation to get into the app. 
+Quantico is planning to centralize authentication for all users with some security rules and mechanism specialized to these credentials
 
 ## Goals ##
-Aquí podríamos describir los user stories
+[User Stories](/user_stories/list.md ':include')
 
 ## Out of Scope ##
-Aquí podemos definir exactamente qué elementos se encuentran fuera del alcance
+For now  we only provide the endpoints and logic to manage authentication. Do not have frontend to manage credentials by itself
 
 ## Future Goals ##
-Aquí podemos describir cuál serán los user stories anhelados para el futuro
+Include some frontend integration and provide access like Google Auth of Facebook Auth
 
 ## Current Solution ##
-
+Before this launch, the credentials were spread and using different logic on each product.
 
 ## Proposed Solution ##
-* Create API personality
+Centralized the authentication managing
