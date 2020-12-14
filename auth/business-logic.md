@@ -1,6 +1,6 @@
 ## Business Logic
 
-* **Signin** endpoint
+<!-- * **Signin** endpoint
 Endpoint
 
 [/signin](#)
@@ -86,76 +86,119 @@ Response
         username: "username",
         password: "password"
     }
-```
+``` -->
 
 
 
-* **updateProfile** endpoint
-Endpoint
-[/signup](#)
-Input
+**UpdateProfile** mutation, this mutation update profile user
+* Query variables
 ```json
     {
-        username: "username",
-        password: "password"
+        "username": "sonne",
+        "input":{
+            "lang": "es",
+            "username": "username",
+            "email": "email",
+            "permissions": ["permission1", "permission2"],
+            "clientIds": [1, 2 ,3],
+            "fullname": "Nombre Apellido"
+        }
     }
 ```
-Response
-```json
-    {
-        username: "username",
-        password: "password"
+* Mutation
+```graphql
+    mutation Request($input: ProfileInput, $username: String){
+        UpdateProfile(input: $input, username: $username){
+            id
+            fullname
+            username
+            email
+            permissions
+            clientIds
+            lang
+        }
     }
 ```
-
-
-
-
-* **resetPasswordToken** endpoint
-Endpoint
-[/signup](#)
-Input
+* Response
 ```json
     {
-        username: "username", //OR
-        email : "email"
-    }
-```
-Response
-```json
-    {
-        tokenReset: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmNDg2ZmQ3ODAwYzQwMDAxOWQ5N2Y3MCIsInVzZXJuYW1lIjoic290b3lhIiwiX3Nlc3Npb25faWQiOiIyMGFmMzMxOSIsImlhdCI6MTYwNzcwODYyNywiZXhwIjoxNjA3NzMwMjI3fQ.c32ICGy5jdvc8g4LXCAJoAphP0jEL6PkDGPIaesGolg", //Token with a Expiration Date
-      
-    }
-```
-
-
-
-
-* **resetPassword** endpoint
-Endpoint
-[/signup](#)
-Input
-```json
-    {
-        newPassword: "newPassworValue",
-        resetToken: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmNDg2ZmQ3ODAwYzQwMDAxOWQ5N2Y3MCIsInVzZXJuYW1lIjoic290b3lhIiwiX3Nlc3Npb25faWQiOiIyMGFmMzMxOSIsImlhdCI6MTYwNzcwODYyNywiZXhwIjoxNjA3NzMwMjI3fQ.c32ICGy5jdvc8g4LXCAJoAphP0jEL6PkDGPIaesGolg"
-    }
-```
-Response
-```json
-    {
-        message_code: "code", // Define some code for sucess or error
+    "data": {
+        "UpdateProfile": {
+            "id": "5f46ebf611a22b2b2b271d19",
+            "fullname": null,
+            "username": "sonne",
+            "email": "carlosh.mitma@gmail.com",
+            "permissions": [
+                "read:personality"
+            ],
+            "clientIds": [],
+            "lang": "es"
+            }
+        }
     }
 ```
 
 
 
-* Page 3 - Me endpoint
+
+**PasswordToken** mutation, this mutation returns a token to be used in the mutation ResetPassword 
+* Query variables
+```json
+    {
+        "input": {
+            "username": "username", #or
+            "email": "username@mail.com",
+        }
+    }
+```
+* Mutation
+```graphql
+    mutation Request($input: PasswordInput){
+        PasswordToken(input:$input)
+    }
+```
+* Response
+```json
+    {
+        "data": {
+            "PasswordToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmNDZlYmY2MTFhMjJiMmIyYjI3MWQxOSIsImFjdGlvbiI6IlJFU0VUX1BBU1NXT1JEIiwiZXhwaXJlSW4iOiIyMDIwLTEyLTE2IDE2OjQyOjUzIiwiaWF0IjoxNjA3OTgyODIyLCJleHAiOjE2MDgxNTU2MjJ9.gCw6JjON1pRcT9aoFT6q4BYtUFQm0Nf_jDbUPA4zAMA"
+        }
+    }
+```
+
+
+
+**ResetPassword** mutation, this mutation change password and needed token from mutation ResetPassword
+* Query variables
+```json
+    {
+        "input": {
+            "newPassword": "sonnemon",
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmNDZlYmY2MTFhMjJiMmIyYjI3MWQxOSIsImFjdGlvbiI6IlJFU0VUX1BBU1NXT1JEIiwiZXhwaXJlSW4iOiIyMDIwLTEyLTE2IDE1OjA0OjU2IiwiaWF0IjoxNjA3OTc5MzY0LCJleHAiOjE2MDgxNTIxNjR9.G4yT558CqNjMFYcUVYV7xzHKKPAnXKEyaUDFcOb2e8E"
+        }
+    }
+```
+* Query
+```graphql
+    mutation Request($input:ResetPasswordInput){
+        ResetPassword(input: $input)
+    }
+```
+* Response
+```json
+    {
+        "data": {
+            "ResetPassword": "PASSOWRD_UPDATED_SUCCEFULY"
+        }
+    }
+```
+
+
+<!-- * Page 3 - Me endpoint
 
 Need cookie in request
 
 * Page 3 - Logout endpoint
 
-[cinwell website](https://viewer.diagrams.net/?highlight=0000ff&edit=_blank&nav=1#G1HJvXC-rNgYBeGxZ9CIc_TBp01KqHjeyF ':include :type=iframe width=100% height=600px')
+[cinwell website](https://viewer.diagrams.net/?highlight=0000ff&edit=_blank&nav=1#G1HJvXC-rNgYBeGxZ9CIc_TBp01KqHjeyF ':include :type=iframe width=100% height=600px') -->
 
