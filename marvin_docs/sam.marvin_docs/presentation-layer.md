@@ -21,6 +21,41 @@
 - **Desktop**
 - **Mobile**
 
+### Resources
+
+#### API
+
+- **Quantico Services:**
+    - Quantico Auth
+
+- **External Services:**
+    - MongoDB
+    - RabbitMq
+    - ElasticSearch
+
+    (Deployment)
+    - Docker
+    - Kubernetes
+
+    (Lenguaje)
+    - TypeScript
+
+#### CLIENT
+
+- **Quantico Services:**
+    - Api marvin
+
+    (Deployment)
+    - Docker
+    - Kubernetes
+
+    (Lenguaje)
+    - JavaScript 
+    - ReactJs
+
+
+
+
 ### Interfaces
 
 ### Alerts and error messages
