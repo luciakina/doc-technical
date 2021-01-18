@@ -1,3 +1,1 @@
 ## User manual
-
-![image](/images/)
