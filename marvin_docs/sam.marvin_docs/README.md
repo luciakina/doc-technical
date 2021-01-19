@@ -1,4 +1,4 @@
-# [PROJECT] - Tech Specs #
+# SAM MARVIN APP #
 
 ## Short description
 Application that automates the analysis and categorization of texts, by uploading excel documents.

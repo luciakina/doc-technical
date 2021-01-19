@@ -1,4 +1,4 @@
-# Auth #
+# Auth API - Service #
 
 ## Abstract ##
 Auth Service is a centralized product to manage user credentials for all products provided by Quantico
