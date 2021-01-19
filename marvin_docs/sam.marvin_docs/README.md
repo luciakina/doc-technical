@@ -5,7 +5,7 @@ Application that automates the analysis and categorization of texts, by uploadin
 
 ## Terminology
 - Modelo - It refers to the base data with which the AI ​​is trained.
-- Proceso - A process refers to the action of analyzing database (excel or csv document)
+- Proceso - A process refers to the action of analyzing a database (excel or csv document)
 - Benchmark - Comparative charts of tags performance on a period of time, it is obtained by comparing two or more "procesos".
 - Etiquetas - Tags that the process assigns to each text or comment.
 
